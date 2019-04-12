@@ -45,3 +45,18 @@ add_filter( 'sp_header4_template', function( $template ){
   $template = get_stylesheet_directory().'/partials/header4.php';
   return $template;
 } );
+
+// Register side bar for Gallery Space
+add_action( 'widgets_init', function(){
+
+  register_sidebar( array(
+    'name' 			=> 'Gallery Space',
+    'id' 			  => 'gallery-space',
+    'description' 	=> 'Appears before the navigation menu',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' 	=> '</aside>',
+    'before_title' 	=> '<h3 class="widget-title">',
+    'after_title' 	=> '</h3>',
+  ) );
+
+});

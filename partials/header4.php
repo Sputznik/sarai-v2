@@ -1,5 +1,5 @@
 <div id="gallery" class="container">
-    Gallery Space
+  <?php if( is_active_sidebar( 'gallery-space' ) ): dynamic_sidebar( 'gallery-space' ); endif; ?>
 </div>
 
 <div id="social-main" class="container">
