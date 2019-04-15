@@ -10,9 +10,15 @@ add_action('wp_enqueue_scripts',function(){
 add_filter( 'sp_list_google_fonts', function( $fonts ){
 
   $fonts[] = array(
-    'slug'	=> 'comfortaa',
-    'name'	=> 'Comfortaa',
-    'url'	  => 'Comfortaa'
+      'slug'	=> 'comfortaa',
+      'name'	=> 'Comfortaa',
+      'url'	  => 'Comfortaa'
+    );
+
+    $fonts[] =array(
+      'slug'	=> 'roboto',
+      'name'	=> 'Roboto Slab',
+      'url'	  => 'Roboto+Slab'
   );
   return $fonts;
 } );

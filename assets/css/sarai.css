@@ -7,6 +7,7 @@
 }  */
 
 #gallery{
+  /* background-color: #ddd; */
   padding: 0;
 }
 
@@ -43,7 +44,7 @@ color: #F58634;
 
  .navbar-brand img{
   height: 40px;
-  margin-left: -14px;
+  margin-left: -16px;
 }
 
 .navbar-brand img:hover{
@@ -61,7 +62,7 @@ color: #F58634;
 
 #bs-example-navbar-collapse-1{
    /* margin: 0; */
-   /* padding: 0; */
+   padding: 0;
 }
 ul#menu-main-menu{
   margin: 0;
@@ -110,6 +111,8 @@ ul.dropdown-menu li a:hover {
 }
 
 .navbar-toggle{
+  padding: 9px 0 9px 9px;
+  border: none;
   margin-right: 0;
 }
 
