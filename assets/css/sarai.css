@@ -64,25 +64,26 @@ color: #F58634;
    /* margin: 0; */
    padding: 0;
 }
-ul#menu-main-menu{
+
+.navbar-collapse ul{
   margin: 0;
   padding: 0;
 }
-ul#menu-main-menu li{
+.navbar-collapse ul > li{
   padding: 0;
   margin-right: 60px;
 }
 
-ul#menu-main-menu > li > a{
+.navbar-collapse ul > li > a{
   font-weight: bold;
   font-size: 15px;
   padding: 0;
   color: #000;
 }
 
-ul#menu-main-menu > li.active > a,
-ul#menu-main-menu > li > a:hover,
-ul#menu-main-menu > li > a:focus
+.navbar-collapse ul > li.active > a,
+.navbar-collapse ul > li > a:hover,
+.navbar-collapse ul > li > a:focus
  {
   color:#666;
   background-color: transparent;
@@ -127,6 +128,11 @@ ul.dropdown-menu li a:hover {
   max-width: 82px;
 }
 
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: transparent;
+    border: none;
+}
+
 @media (min-width: 768px) {
   .navbar-header .logo{
     display: none;
@@ -135,7 +141,7 @@ ul.dropdown-menu li a:hover {
 
 @media (min-width: 768px) and (max-width: 992px) {
 
-ul#menu-main-menu li{
+.navbar-collapse ul > li{
   margin-right: 40px;
 }
 
@@ -168,24 +174,24 @@ ul#menu-main-menu li{
   }
 
   /*navbar*/
-  ul#menu-main-menu{
+  .navbar-collapse ul{
     margin: 0;
     padding: 0;
   }
-  ul#menu-main-menu li{
+  .navbar-collapse ul > li{
     padding: 0;
     margin: 0;
   }
 
-  ul#menu-main-menu > li > a{
+  .navbar-collapse ul > li > a{
     padding: 10px;
     color: #000;
     border-bottom: 1px solid #fff;
   }
 
-  ul#menu-main-menu > li.active > a,
-  ul#menu-main-menu > li > a:hover,
-  ul#menu-main-menu > li > a:focus
+  .navbar-collapse ul > li.active > a,
+  .navbar-collapse ul > li > a:hover,
+  .navbar-collapse ul > li > a:focus
    {
     color: #666;
     background-color: transparent;
