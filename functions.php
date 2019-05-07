@@ -1,7 +1,7 @@
 <?php
 add_action('wp_enqueue_scripts',function(){
   wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.0.0' );
-  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.0' );
+  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.1' );
 });
 
 
@@ -32,9 +32,9 @@ add_filter('sp_nav_menu_options', function( $sp_nav_menu_options ){
 
   if( $header_type == 'header4' ){
 
-    $sp_nav_menu_options['container_class'] = 'navbar-collapse collapse';
+    $sp_nav_menu_options['container_class'] = 'collapse navbar-collapse';
     $sp_nav_menu_options['container_id']    = 'bs-example-navbar-collapse-1';
-    $sp_nav_menu_options['menu_class']      = 'nav navbar-nav top-buffer';
+    $sp_nav_menu_options['menu_class']      = 'nav navbar-nav navbar-right';
 
   }
 

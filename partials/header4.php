@@ -1,19 +1,6 @@
 <div id="gallery" class="container">
   <?php if( is_active_sidebar( 'gallery-space' ) ): dynamic_sidebar( 'gallery-space' ); endif; ?>
 </div>
-
-<div id="social-main" class="container">
-      <?php do_action('sp_logo'); ?>
-  <div class="social">
-    <ul class="list-inline pull-right">
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-      <li><a href="#"><i class="fa fa-search"></i></a></li>
-    </ul>
-  </div>
-</div>
   <nav class="navbar header4">
   	<div class="container">
   		<div class="navbar-header">
@@ -22,8 +9,11 @@
   				<span class="icon-bar"></span>
   				<span class="icon-bar"></span>
   			</button>
-        <?php do_action('sp_logo'); ?>
+  			<?php do_action('sp_logo');?>
   		</div>
+
   		<?php do_action('sp_nav_menu');?>
+
   	</div>
+  	<!-- /.container -->
   </nav>
