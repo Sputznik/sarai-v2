@@ -75,6 +75,8 @@ ul.dropdown-menu li a:hover {
 }
 
 /*Media queries*/
+
+/* When width is less than 768px */
 @media ( max-width: 768px ){
 
   .container > .navbar-header, .container > .navbar-collapse{
@@ -97,6 +99,7 @@ ul.dropdown-menu li a:hover {
 
 }
 
+/* When width is greater than 768px */
 @media (min-width: 768px){
 
   .navbar-brand{
@@ -109,6 +112,11 @@ ul.dropdown-menu li a:hover {
 
   .navbar-collapse > .navbar-right > li > a.dropdown-toggle{
     padding-bottom: 0;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-menu{
+    display: block;
   }
 
 }
