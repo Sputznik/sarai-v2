@@ -1,10 +1,12 @@
 <?php
 add_action('wp_enqueue_scripts',function(){
   wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.0.0' );
-  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.3' ); 
+  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.4' );
 });
 
 
+// Include Custom Post Type
+include( get_stylesheet_directory().'/cpt/projects.php' );
 
 //Add google Comfortaa text font
 add_filter( 'sp_list_google_fonts', function( $fonts ){
@@ -56,9 +58,19 @@ add_filter( 'sp_header4_template', function( $template ){
 add_action( 'widgets_init', function(){
 
   register_sidebar( array(
-    'name' 			=> 'Gallery Space',
-    'id' 			  => 'gallery-space',
+    'name' 			    => 'Gallery Space',
+    'id' 			      => 'gallery-space',
     'description' 	=> 'Appears before the navigation menu',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' 	=> '</aside>',
+    'before_title' 	=> '<h3 class="widget-title">',
+    'after_title' 	=> '</h3>',
+  ) );
+
+  register_sidebar( array(
+    'name' 			    => 'Projects',
+    'id' 			      => 'projects',
+    'description' 	=> 'Shows all project\'s',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' 	=> '</aside>',
     'before_title' 	=> '<h3 class="widget-title">',
