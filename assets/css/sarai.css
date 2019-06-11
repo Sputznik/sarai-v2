@@ -164,7 +164,6 @@ ul.dropdown-menu li a{
   .navbar-nav>li>.dropdown-menu{
     border: 1px solid #eee;
     padding: 0;
-    min-width: 110px;
   }
 
   ul.dropdown-menu li a{
