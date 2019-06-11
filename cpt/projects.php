@@ -1,6 +1,6 @@
 <?php
 
-// Creates a custom post type 
+// Creates a custom post type
 
 add_filter( 'orbit_post_type_vars', function( $post_types ){
 
@@ -13,7 +13,6 @@ add_filter( 'orbit_post_type_vars', function( $post_types ){
       'add_new_item'  => 'Add New Project',
       'all_items'     =>  'All Projects'
 		),
-		// 'rewrite'		=> array('slug' => 'incidents', 'with_front' => false ),
 		'public'		=> true,
 		'supports'	=> array( 'title', 'editor','thumbnail' )
 	);

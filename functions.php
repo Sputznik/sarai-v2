@@ -1,7 +1,7 @@
 <?php
 add_action('wp_enqueue_scripts',function(){
   wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.0.0' );
-  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.4' );
+  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.5' );
 });
 
 

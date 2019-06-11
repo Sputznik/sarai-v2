@@ -98,13 +98,13 @@ ul.dropdown-menu li a{
   font-size: 18px;
 }
 
-#recent-projects .widget ul{
+#projects-sidebar .widget ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#recent-projects .widget ul li{
+#projects-sidebar .widget ul li{
   margin-bottom: 10px;
 }
 
