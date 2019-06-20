@@ -15,7 +15,7 @@
         <p><?php echo get_post_meta( $post->ID, 'event-venue', true );?></p>
         <p><?php echo get_post_meta( $post->ID, 'event-date', true );?></p>
       </div>
-      <div class="project-content" style="margin-bottom:30px;"><?php the_content(); ?></div>
+      <div class="project-content" style="margin-bottom:100px;"><?php the_content(); ?></div>
       <?php endwhile;endif; ?>
     </div>
     <div class="col-md-3 col-md-offset-1 col-xs-12" id="projects-sidebar">

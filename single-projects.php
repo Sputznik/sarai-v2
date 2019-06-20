@@ -10,7 +10,7 @@
       <div class='project-featured-image'><?php the_post_thumbnail(); ?></div>
       <?php endif;?>
       <!-- Featured Image ends -->
-      <div class="project-content" style="margin-bottom:30px;"><?php the_content(); ?></div>
+      <div class="project-content" style="margin-bottom:100px;"><?php the_content(); ?></div>
       <?php endwhile;endif; ?>
     </div>
     <div class="col-md-3 col-md-offset-1 col-xs-12" id="projects-sidebar">
