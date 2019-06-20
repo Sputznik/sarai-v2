@@ -6,7 +6,7 @@ add_action('wp_enqueue_scripts',function(){
 
 
 // Include Custom Post Type
-include( get_stylesheet_directory().'/cpt/projects.php' );
+include( get_stylesheet_directory().'/cpt/cpt.php' );
 
 //Add google Comfortaa text font
 add_filter( 'sp_list_google_fonts', function( $fonts ){
