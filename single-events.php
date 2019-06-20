@@ -19,7 +19,7 @@
       <?php endwhile;endif; ?>
     </div>
     <div class="col-md-4 col-md-offset-1 col-xs-12" id="projects-sidebar" style="padding-top:25px;">
-      <?php if( is_active_sidebar( 'projects' ) ){ dynamic_sidebar( 'projects' );}?>
+      <?php if( is_active_sidebar( 'events' ) ){ dynamic_sidebar( 'events' );}?>
     </div>
   </div>
 </div>
