@@ -10,6 +10,11 @@
       <div class='project-featured-image'><?php the_post_thumbnail(); ?></div>
       <?php endif;?>
       <!-- Featured Image ends -->
+      <div class="events-meta" style="margin-top:20px;">
+        <?php global $post;?>
+        <p><?php echo get_post_meta( $post->ID, 'event-venue', true );?></p>
+        <p><?php echo get_post_meta( $post->ID, 'event-date', true );?></p>
+      </div>
       <div class="project-content"><?php the_content(); ?></div>
       <?php endwhile;endif; ?>
     </div>
