@@ -74,8 +74,16 @@ ul.dropdown-menu li a{
   margin: 20px 0 15px;
 }
 
+/* Site Description */
+.site-desc{
+  background-color:#efefef;
+  padding:4px;
+  margin-bottom: 30px;
+}
+
 /* Title */
-.project-title{
+.project-title,
+.single-post-title{
   text-align: left;
   font-size: 30px;
   color: #41c3d6;
@@ -83,29 +91,33 @@ ul.dropdown-menu li a{
 }
 
 /* Featured Image */
-.project-featured-image img{
+.project-featured-image img,
+.single-post-featured-image img{
   width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-.project-content{
+.project-content,
+.single-post-content{
   margin-top: 30px;
 }
 
-/* Projects sidebar */
+/* Projects and Single Post sidebar */
 .widget-title{
   color: #00a685;
   font-size: 18px;
 }
 
-#projects-sidebar .widget ul{
+#projects-sidebar .widget ul,
+#single-post-sidebar .widget ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#projects-sidebar .widget ul li{
+#projects-sidebar .widget ul li,
+#single-post-sidebar .widget ul li{
   margin-bottom: 10px;
 }
 
@@ -177,4 +189,12 @@ ul.dropdown-menu li a{
     background-color: #F58634;
   }
 
+}
+
+
+.border{
+  width: 100%;
+  height: 2px;
+  background: #000;
+  margin: 30px 0;
 }
