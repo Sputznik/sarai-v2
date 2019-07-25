@@ -1,7 +1,7 @@
 <?php
 add_action('wp_enqueue_scripts',function(){
   wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.0.0' );
-  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.8' );
+  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.0.9' );
 });
 
 add_action('sp_header', function(){
@@ -32,6 +32,19 @@ add_filter( 'sp_list_google_fonts', function( $fonts ){
 add_filter( 'excerpt_more', function(){
  return;
 });
+
+// Shortcode for left column
+function left_column( $atts, $content = null ) {
+	return '<div class="left-col">' . $content . '</div>';
+}
+add_shortcode( 'left', 'left_column' );
+
+// Shortcode for right column
+function right_column( $atts, $content = null ) {
+	return '<div class="right-col">' . $content . '</div>';
+}
+add_shortcode( 'right', 'right_column' );
+
 
 /* CHANGE THE ATTRIBUTES PASSED TO THE NAVIGATION MENU */
 // add_filter('sp_nav_menu_options', function( $sp_nav_menu_options ){
