@@ -33,6 +33,14 @@ add_filter( 'excerpt_more', function(){
  return;
 });
 
+//Remove Category prefix from title on archive template
+add_filter( 'get_the_archive_title', function ( $title ) {
+	if( is_category() ) {
+		$title = single_cat_title( '', false );
+	}
+	return $title;
+});
+
 // Shortcode for left column
 function left_column( $atts, $content = null ) {
 	return '<div class="left-col">' . $content . '</div>';
