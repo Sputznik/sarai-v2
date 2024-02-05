@@ -3,7 +3,8 @@
   <?php if( have_posts() ): while( have_posts() ): the_post();?>
   <div class="row">
     <div class="col-md-7 col-xs-12">
-      <h5 style="margin-top: 25px;color:#777777;">Feature</h5>
+      <!-- <h5 style="margin-top: 25px;color:#777777;">Feature</h5> -->
+      <h5 style="margin-top: 25px;color:#777777;"><?php echo do_shortcode("[sarai_post_parent_categories]"); ?></h5>
       <h2 class="single-post-title"><?php the_title(); ?></h2>
       <div class="post-meta"><?php echo do_shortcode("[sarai_author_posts_link]"); ?></div>
       <!-- Featured Image -->

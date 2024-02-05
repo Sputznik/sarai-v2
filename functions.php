@@ -140,3 +140,19 @@ add_shortcode( 'sarai_author_posts_link', function(){
   $html .= '</span>';
   return $html;
 } );
+
+/* SHORTCODE TO RETURN POST PARENT CATEGORIES */
+add_shortcode( 'sarai_post_parent_categories',function(){
+  $categories = get_the_category( get_the_ID() );
+  $parent_terms = array();
+
+  foreach( $categories as $category ){
+    if( $category->category_parent === 0 ){
+      $parent_cat = '<a href="'.esc_url( get_term_link( $category->term_id ) ) .'">'.esc_html( $category->name ).'</a>';
+      array_push( $parent_terms, $parent_cat );
+    }
+  }
+
+  return count( $parent_terms ) ? implode( ', ', $parent_terms ) : '';
+
+} );
