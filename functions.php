@@ -127,10 +127,16 @@ add_action( 'widgets_init', function(){
   ) );
 });
 
+/* SHORTCODE TO RETURN AUTHOR POSTS LINK */
+add_shortcode( 'sarai_author_posts_link', function(){
+  $html = '<span class="coauthors-link">by ';
 
-// ENABLE COAUTHOR METABOX
-add_filter( 'coauthors_count_published_post_types', function( $post_types ) {
-  $coauthor_cpt_support = array('projects');
-  array_push( $coauthor_cpt_support );
-  return $post_types;
+  if ( function_exists('coauthors_posts_links') ) {
+    $html .= coauthors_posts_links( null, null, null, null, false );
+  } else {
+    $html .= get_the_author_posts_link();
+  }
+
+  $html .= '</span>';
+  return $html;
 } );

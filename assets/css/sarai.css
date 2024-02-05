@@ -126,6 +126,16 @@ ul.dropdown-menu li a{
   margin-bottom: 10px;
 }
 
+/* CO-AUTHORS */
+#single-post .post-meta {
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.coauthors-link a {
+  text-transform: capitalize;
+}
+
 /*Media queries*/
 @media ( max-width: 768px ){
 

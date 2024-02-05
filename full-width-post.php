@@ -8,6 +8,7 @@ get_header();?>
     <div class="col-md-12 col-xs-12">
       <!--h5 style="margin-top: 25px;color:#777777;">Feature</h5-->
       <h2 class="single-post-title"><?php the_title(); ?></h2>
+      <div class="post-meta"><?php echo do_shortcode("[sarai_author_posts_link]"); ?></div>
       <!-- Featured Image -->
       <?php if( has_post_thumbnail() ):?>
       <div class='single-post-featured-image'><?php the_post_thumbnail(); ?></div>
