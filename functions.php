@@ -1,7 +1,7 @@
 <?php
 add_action('wp_enqueue_scripts',function(){
-  wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.0.1' );
-  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.1.0' );
+  wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.2.0' );
+  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.2.0' );
 });
 
 add_action('sp_header', function(){
@@ -142,7 +142,7 @@ add_shortcode( 'sarai_author_posts_link', function(){
 } );
 
 /* SHORTCODE TO RETURN POST PARENT CATEGORIES */
-add_shortcode( 'sarai_post_parent_categories',function(){
+add_shortcode( 'sarai_post_parent_categories', function(){
   $categories = get_the_category( get_the_ID() );
   $parent_terms = array();
 
