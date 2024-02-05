@@ -12,7 +12,12 @@
       <div class='single-post-featured-image'><?php the_post_thumbnail(); ?></div>
       <?php endif;?>
       <!-- Featured Image ends -->
-      <div class="single-post-content" style="margin-bottom:100px;"><?php the_content(); ?></div>
+      <div class="single-post-content" style="margin-bottom:100px;">
+        <?php the_content(); ?>
+        <?php if( has_tag() ):?>
+          <div class="post-tags"><span>Tags: </span><?php the_tags( '', '', '' ); ?></div>
+        <?php endif;?>
+      </div>
       <?php endwhile;endif; ?>
     </div>
     <div class="col-md-4 col-md-offset-1 col-xs-12" id="single-post-sidebar" style="padding-top:25px;">

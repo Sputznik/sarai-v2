@@ -126,6 +126,26 @@ ul.dropdown-menu li a{
   margin-bottom: 10px;
 }
 
+/* SINGLE POST TAGS */
+#single-post .post-tags {
+  margin-top: 40px
+}
+
+#single-post .post-tags > a {
+  font-size: 14px;
+  padding: 8px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+}
+
+#single-post .post-tags * {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 6px 6px 0;
+}
+
 /* CO-AUTHORS */
 #single-post .post-meta {
   padding: 10px 0;
