@@ -126,3 +126,11 @@ add_action( 'widgets_init', function(){
     'after_title' 	=> '</h3>',
   ) );
 });
+
+
+// ENABLE COAUTHOR METABOX
+add_filter( 'coauthors_count_published_post_types', function( $post_types ) {
+  $coauthor_cpt_support = array('projects');
+  array_push( $coauthor_cpt_support );
+  return $post_types;
+} );

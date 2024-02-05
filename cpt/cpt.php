@@ -14,7 +14,7 @@ add_filter( 'orbit_post_type_vars', function( $post_types ){
       'all_items'     =>  'All Projects'
 		),
 		'public'		=> true,
-		'supports'	=> array( 'title', 'editor','thumbnail' )
+		'supports'	=> array( 'title', 'editor','thumbnail', 'author' )
 	);
 
 	$post_types['events'] = array(
