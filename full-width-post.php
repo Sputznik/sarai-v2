@@ -1,6 +1,6 @@
 <?php
 /* Template Name: Full Width Post
-Template Post Type: post */
+Template Post Type: post, projects */
 get_header();?>
 <div class="container" id="single-post">
   <?php if( have_posts() ): while( have_posts() ): the_post();?>
