@@ -5,6 +5,7 @@
     <div class="col-md-7 col-xs-12">
       <h5 style="margin-top: 25px;color:#777777;">Project</h5>
       <h2 class="project-title"><?php the_title(); ?></h2>
+      <div class="post-meta"><?php echo do_shortcode("[sarai_author_posts_link]"); ?></div>
       <!-- Featured Image -->
       <?php if( has_post_thumbnail() ):?>
       <div class='project-featured-image'><?php the_post_thumbnail(); ?></div>
