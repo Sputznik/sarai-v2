@@ -243,3 +243,11 @@ ul.dropdown-menu li a{
   float: right;
   width: 48%;
 }
+
+/* ARCHIVE PAGINATION */
+.sarai-pagination.search-pagination .page-numbers.current,
+.sarai-pagination.search-pagination a.page-numbers:hover {
+  background: #f58634;
+  border-color: #f58634;
+  color: #ffffff;
+}

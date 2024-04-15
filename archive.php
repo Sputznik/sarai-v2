@@ -18,4 +18,18 @@
     </div>
   </div>
 </div>
+<div class="container-fluid search-pagination sarai-pagination">
+  <div class="container text-center">
+    <?php
+      the_posts_pagination(
+        array(
+          'mid_size' 	=> 1,
+          'prev_text' => __( '&laquo;' ),
+          'next_text' => __( '&raquo;' ),
+          'screen_reader_text' => __( ' ' ),
+        )
+      );
+    ?>
+  </div>
+</div>
 <?php get_footer();?>
