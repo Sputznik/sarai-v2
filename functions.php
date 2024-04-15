@@ -156,3 +156,19 @@ add_shortcode( 'sarai_post_parent_categories', function(){
   return count( $parent_terms ) ? implode( ', ', $parent_terms ) : '';
 
 } );
+
+// FILTER TO SHOW PROJECT AND EVENT POSTS IN ARCHIVE TEMPLATE
+add_action( 'pre_get_posts', function( $query ){
+  if ( !is_admin() && is_tag() && $query->is_main_query() ) {
+    $post_types = array( 'post', 'projects', 'events' );
+    $query->set( 'post_type', $post_types );
+  }
+} );
+
+// FILTER TO SHOW EVENT POSTS IN ARCHIVE TEMPLATE
+add_action( 'pre_get_posts', function( $query ){
+  if ( !is_admin() && is_category() && $query->is_main_query() ) {
+    $post_types = array( 'post', 'events' );
+    $query->set( 'post_type', $post_types );
+  }
+} );
