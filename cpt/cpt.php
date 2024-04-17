@@ -53,3 +53,16 @@ add_filter( 'orbit_meta_box_vars', function( $meta_box ){
 	);
 	return $meta_box;
 });
+
+
+/* PUSH INTO THE GLOBAL VARS OF ORBIT TAXNOMIES */
+add_filter( 'orbit_taxonomy_vars', function( $orbit_tax ){
+	$orbit_tax['year']	= array(
+		'slug' 			  => 'year',
+		'label'			  => 'Year',
+		'post_types'	=> array( 'post', 'projects', 'events' )
+	);
+
+	return $orbit_tax;
+
+});
