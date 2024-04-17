@@ -13,8 +13,9 @@ add_filter( 'orbit_post_type_vars', function( $post_types ){
       'add_new_item'  => 'Add New Project',
       'all_items'     =>  'All Projects'
 		),
-		'public'		=> true,
-		'supports'	=> array( 'title', 'editor','thumbnail', 'author' )
+		'public'		 => true,
+		'taxonomies' => array( 'post_tag' ),
+		'supports'	 => array( 'title', 'editor','thumbnail', 'author' )
 	);
 
 	$post_types['events'] = array(
@@ -26,9 +27,10 @@ add_filter( 'orbit_post_type_vars', function( $post_types ){
       'add_new_item'  => 'Add New Event',
       'all_items'     => 'All Events'
 		),
-		'menu_icon'	=> 'dashicons-format-gallery',
-		'public'		=> true,
-		'supports'	=> array( 'title', 'editor','thumbnail' )
+		'menu_icon'	 => 'dashicons-format-gallery',
+		'public'		 => true,
+		'taxonomies' => array( 'category', 'post_tag' ),
+		'supports'	 => array( 'title', 'editor','thumbnail' )
 	);
 
 	return $post_types;
@@ -62,6 +64,12 @@ add_filter( 'orbit_taxonomy_vars', function( $orbit_tax ){
 		'label'			  => 'Year',
 		'post_types'	=> array( 'post', 'projects', 'events' )
 	);
+
+	$orbit_tax['project-group']	= array(
+    'label'			=> 'Project Group',
+    'slug' 			=> 'project-group',
+    'post_types'	=> array( 'projects' )
+  );
 
 	return $orbit_tax;
 
