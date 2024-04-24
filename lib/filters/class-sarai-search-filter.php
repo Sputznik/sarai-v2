@@ -117,6 +117,9 @@ class SARAI_SEARCH_FILTER {
 
 		$new_items = array();
 
+		// RETURN IF TAXONOMY IS INVALID OR TERMS ARE EMPTY
+		if( is_wp_error( $terms ) || empty( $terms ) ) return $new_items;
+
 		foreach( $terms as $term ){
 			array_push( $new_items, array( 'slug' => $term->slug, 'name'	=> $term->name ) );
 		}
