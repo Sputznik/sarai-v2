@@ -1,7 +1,20 @@
 <?php
+
+/**
+ * Define Constants
+ */
+
+if( !defined( 'SARAI_THEME_VERSION' ) ){
+  define( 'SARAI_THEME_VERSION', '1.2.2' );
+}
+
+if( !defined( 'SARAI_DIR_URI' ) ){
+  define( 'SARAI_DIR_URI', untrailingslashit( get_stylesheet_directory_uri() ) );
+}
+
 add_action('wp_enqueue_scripts',function(){
-  wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.2.1' );
-  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), '1.2.1' );
+  wp_enqueue_style('sarai-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), SARAI_THEME_VERSION );
+  wp_enqueue_style( 'sarai', get_stylesheet_directory_uri() .'/assets/css/sarai.css', array( 'sarai-child' ), SARAI_THEME_VERSION );
 });
 
 add_action('sp_header', function(){
@@ -10,6 +23,7 @@ add_action('sp_header', function(){
 
 // Include Custom Post Type
 include( get_stylesheet_directory().'/cpt/cpt.php' );
+include( get_stylesheet_directory().'/lib/filters/class-sarai-search-filter.php' );
 
 //Add google Comfortaa text font
 add_filter( 'sp_list_google_fonts', function( $fonts ){
